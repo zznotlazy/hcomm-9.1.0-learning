@@ -1,0 +1,23 @@
+# RunAlltoAllVFor310PExecutor
+
+注册：[coll_all_to_all_v_for_310p_executor.cc](../../../../../src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/310P/coll_all_to_all_v_for_310p_executor.cc#L120)；类 `CollRunAlltoAllVFor310PExecutor`。
+
+共享代码可能含其他芯片分支。模板清单为出现位置；按完整函数中的设备/层次/子域条件确认实际执行。
+
+## coll_all_to_all_v_for_310p_executor.cc
+
+[完整函数与内部条件](sources/algorithm__impl__coll_executor__coll_all_to_all__310P__coll_all_to_all_v_for_310p_executor.md)
+
+## coll_all_to_all_executor.cc
+
+[完整函数与内部条件](sources/algorithm__impl__coll_executor__coll_all_to_all__coll_all_to_all_executor.md)
+
+## coll_native_executor_base.cc
+
+[完整函数与内部条件](sources/algorithm__impl__coll_executor__coll_native_executor_base.md)
+
+## 模板注册与出现位置
+
+| 模板 | 首个出现 | 实现注册 |
+|---|---|---|
+| TEMPLATE_ALL_2_ALL_V_FOR310P | [coll_all_to_all_v_for_310p_executor.cc](../../../../../src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/310P/coll_all_to_all_v_for_310p_executor.cc#L103) | [AlltoAllVFor310P](../../../../../src/legacy/ascend910/algorithm/base/alg_template/temp_alltoallv/alltoallv_for_310p.cc#L543) |

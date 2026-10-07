@@ -1,0 +1,2876 @@
+{
+  "commands": [
+    "HCCL_CMD_ALLGATHER",
+    "HCCL_CMD_ALLGATHER_V",
+    "HCCL_CMD_ALLREDUCE",
+    "HCCL_CMD_ALLTOALLV",
+    "HCCL_CMD_ALLTOALL",
+    "HCCL_CMD_ALLTOALLVC",
+    "HCCL_CMD_BATCH_WRITE",
+    "HCCL_CMD_BATCH_SEND_RECV",
+    "HCCL_CMD_BROADCAST",
+    "HCCL_CMD_RECEIVE",
+    "HCCL_CMD_REDUCE",
+    "HCCL_CMD_REDUCE_SCATTER",
+    "HCCL_CMD_REDUCE_SCATTER_V",
+    "HCCL_CMD_SCATTER",
+    "HCCL_CMD_SEND"
+  ],
+  "candidates": {
+    "all_gather": [
+      "AllGatherARSFor91093Executor",
+      "AllGatherAivRdmaExecutor",
+      "AllGatherComm",
+      "AllGatherMeshAivExecutor",
+      "AllGatherMeshAivSmallCountExecutor",
+      "AllGatherMeshExecutor",
+      "AllGatherMeshGraphExecutor",
+      "AllGatherMeshGraphPipelineExecutor",
+      "AllGatherMeshOpbaseExecutor",
+      "AllGatherMeshOpbasePipelineExecutor",
+      "AllGatherRingExecutor",
+      "AllGatherSingleExecutor"
+    ],
+    "all_gather_v": [
+      "AllGatherVMeshAivExecutor",
+      "AllGatherVMeshAivSmallCountExecutor",
+      "AllGatherVMeshExecutor",
+      "AllGatherVMeshGraphExecutor",
+      "AllGatherVMeshGraphPipelineExecutor",
+      "AllGatherVMeshOpbasePipelineExecutor"
+    ],
+    "all_reduce": [
+      "AllReduceARSFor91093Executor",
+      "AllReduceAivDeterExecutor",
+      "AllReduceAivDeterSmallExecutor",
+      "AllReduceComm",
+      "AllReduceDeterPipelineExecutor",
+      "AllReduceMeshAivExecutor",
+      "AllReduceMeshAivSmallCountExecutor",
+      "AllReduceMeshExecutor",
+      "AllReduceMeshGraphPipelineExecutor",
+      "AllReduceMeshMidCountLoopExecutor",
+      "AllReduceMeshOneshotLoopExecutor",
+      "AllReduceMeshOpbaseLoopExecutor",
+      "AllReduceMeshOpbaseMidCountDeterministicExecutor",
+      "AllReduceMeshOpbasePipelineExecutor",
+      "AllReduceMeshOpbaseSmallCountDeterministicExecutor",
+      "AllReduceMeshSmallCountExecutor",
+      "AllReduceMidCountAivRdmaExecutor",
+      "AllReduceOrderPreservedExecutor",
+      "AllReduceRingExecutor",
+      "AllReduceSingleExecutor",
+      "AllReduceSmallCountAivRdmaExecutor"
+    ],
+    "alltoall": [
+      "AlltoAllDirectFullmeshAIVExecutor",
+      "AlltoAllMeshAivExecutor",
+      "AlltoAllMeshAivFor91093Executor",
+      "AlltoAllMeshAivSmallCountExecutor",
+      "AlltoAllStagedAIVRdmaExecutor",
+      "RunAlltoAllDirectFullmesh",
+      "RunAlltoAllFullMeshSymmetricMemory",
+      "RunAlltoAllSingleExecutor",
+      "RunAlltoAllVContinuousPipeline",
+      "RunAlltoAllVFor310PExecutor",
+      "RunAlltoAllVFullMesh",
+      "RunAlltoAllVPipelineFor91093",
+      "RunAlltoAllVStaged",
+      "RunAlltoAllVTwoLevelPipeline"
+    ],
+    "batch_write": [],
+    "batchsendrecv": [
+      "BatchSendRecv",
+      "BatchSendRecvGroup",
+      "BatchSendRecvRetry"
+    ],
+    "broadcast": [
+      "BroadCast4pRingExecutor",
+      "BroadCastComm",
+      "BroadCastMeshExecutor",
+      "BroadCastRingExecutor",
+      "BroadcastMeshAivExecutor"
+    ],
+    "receive": [
+      "ReceiveExecutor"
+    ],
+    "reduce": [
+      "ReduceComm",
+      "ReduceMeshExecutor",
+      "ReduceRingPlusHd",
+      "ReduceSingleExecutor"
+    ],
+    "reduce_scatter": [
+      "ReduceScatterARSFor91093Executor",
+      "ReduceScatterAivDeterExecutor",
+      "ReduceScatterAivDeterSmallExecutor",
+      "ReduceScatterAivRdmaExecutor",
+      "ReduceScatterComm",
+      "ReduceScatterDeterExecutor",
+      "ReduceScatterDeterPipelineExecutor",
+      "ReduceScatterMeshAivExecutor",
+      "ReduceScatterMeshAivSmallCountExecutor",
+      "ReduceScatterMeshDmaEliminationExecutor",
+      "ReduceScatterMeshExecutor",
+      "ReduceScatterMeshGraphExecutor",
+      "ReduceScatterMeshGraphPipelineExecutor",
+      "ReduceScatterMeshOpbasePipelineExecutor",
+      "ReduceScatterMeshOpbaseSmallCountDeterministicExecutor",
+      "ReduceScatterOrderPreservedExecutor",
+      "ReduceScatterRingExecutor",
+      "ReduceScatterSingleExecutor"
+    ],
+    "reduce_scatter_v": [
+      "ReduceScatterVAIVBigCountExecutor",
+      "ReduceScatterVDeterExecutor",
+      "ReduceScatterVMeshAivSmallCountExecutor",
+      "ReduceScatterVMeshExecutor",
+      "ReduceScatterVMeshOpbaseExecutor",
+      "ReduceScatterVMeshOpbasePipelineExecutor"
+    ],
+    "scatter": [
+      "ScatterCommExecutor",
+      "ScatterMeshExecutor",
+      "ScatterRingExecutor",
+      "ScatterRingFor91093Executor",
+      "ScatterSingleExecutor"
+    ],
+    "send": [
+      "SendExecutor"
+    ]
+  },
+  "executors": {
+    "AllGatherARSFor91093Executor": {
+      "class": "CollAllGatherARSFor91093Executor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather/coll_all_gather_ars_for_910_93_executor.cc",
+      "line": 83,
+      "parents": [
+        "CollAllGatherRingFor91093Executor",
+        "CollAllGatherExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_AHC",
+        "TEMPLATE_ALL_GATHER_AHC_BROKE",
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherAivRdmaExecutor": {
+      "class": "CollAllGatherAivRdmaExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather/coll_all_gather_aiv_rdma_executor.cc",
+      "line": 283,
+      "parents": [
+        "CollAllGatherExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_NHRV1",
+        "TEMPLATE_ALL_GATHER_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherComm": {
+      "class": "CollAllGatherCommExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather/coll_all_gather_comm_executor.cc",
+      "line": 151,
+      "parents": [
+        "CollAllGatherExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_NHRV1",
+        "TEMPLATE_ALL_GATHER_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherMeshAivExecutor": {
+      "class": "CollAllGatherMeshAivExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather/coll_all_gather_mesh_aiv_executor.cc",
+      "line": 230,
+      "parents": [
+        "CollAllGatherExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherMeshAivSmallCountExecutor": {
+      "class": "CollAllGatherMeshAivSmallCountExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather/coll_all_gather_mesh_aiv_smallcount_executor.cc",
+      "line": 220,
+      "parents": [
+        "CollAllGatherExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherMeshExecutor": {
+      "class": "CollAllGatherMeshExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather/coll_all_gather_mesh_executor.cc",
+      "line": 223,
+      "parents": [
+        "CollAllGatherExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_MESH",
+        "TEMPLATE_ALL_GATHER_MESH_ATOMIC",
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_NHRV1",
+        "TEMPLATE_ALL_GATHER_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherMeshGraphExecutor": {
+      "class": "CollAllGatherMeshGraphExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather/coll_all_gather_mesh_graph_executor.cc",
+      "line": 262,
+      "parents": [
+        "CollAllGatherExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_MESH_ATOMIC",
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_NHRV1",
+        "TEMPLATE_ALL_GATHER_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherMeshGraphPipelineExecutor": {
+      "class": "CollAllGatherMeshGraphPipelineExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather/coll_all_gather_mesh_graph_pipeline_executor.cc",
+      "line": 104,
+      "parents": [
+        "CollAllGatherExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_GRAPH_PIPELINE",
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherMeshOpbaseExecutor": {
+      "class": "CollAllGatherMeshOpbaseExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather/coll_all_gather_mesh_opbase_executor.cc",
+      "line": 128,
+      "parents": [
+        "CollAllGatherExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_MESH_DIRECT",
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherMeshOpbasePipelineExecutor": {
+      "class": "CollAllGatherMeshOpbasePipelineExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather/coll_all_gather_mesh_opbase_pipeline_executor.cc",
+      "line": 134,
+      "parents": [
+        "CollAllGatherExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_PIPELINE",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherRingExecutor": {
+      "class": "CollAllGatherRingExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather/coll_all_gather_ring_executor.cc",
+      "line": 235,
+      "parents": [
+        "CollAllGatherExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_NHRV1",
+        "TEMPLATE_ALL_GATHER_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherSingleExecutor": {
+      "class": "CollAllGatherSingleRankExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather/coll_all_gather_single_rank_executor.cc",
+      "line": 43,
+      "parents": [
+        "CollAllGatherExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherVMeshAivExecutor": {
+      "class": "AllGatherVMeshAivExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather_v/coll_all_gatherv_mesh_aiv_executor.cc",
+      "line": 152,
+      "parents": [
+        "CollAllGatherVExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherVMeshAivSmallCountExecutor": {
+      "class": "CollAllGatherVMeshAivSmallCountExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather_v/coll_all_gatherv_mesh_aiv_smallcount_executor.cc",
+      "line": 149,
+      "parents": [
+        "CollAllGatherVExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherVMeshExecutor": {
+      "class": "CollAllGatherVMeshExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather_v/coll_all_gather_v_mesh_executor.cc",
+      "line": 383,
+      "parents": [
+        "CollAllGatherVExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_MESH_ATOMIC",
+        "TEMPLATE_ALL_GATHER_MESH_DIRECT",
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherVMeshGraphExecutor": {
+      "class": "CollAllGatherVMeshGraphExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather_v/coll_all_gather_v_mesh_graph_executor.cc",
+      "line": 117,
+      "parents": [
+        "CollAllGatherVExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_MESH_ATOMIC",
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherVMeshGraphPipelineExecutor": {
+      "class": "CollAllGatherVMeshGraphPipelineExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather_v/coll_all_gather_v_mesh_graph_pipeline_executor.cc",
+      "line": 105,
+      "parents": [
+        "CollAllGatherVExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_GATHER_V_GRAPH_PIPELINE",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllGatherVMeshOpbasePipelineExecutor": {
+      "class": "CollAllGatherVMeshOpbasePipelineExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_gather_v/coll_all_gather_v_mesh_opbase_pipeline_executor.cc",
+      "line": 178,
+      "parents": [
+        "CollAllGatherVExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_GATHER_V_PIPELINE",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceARSFor91093Executor": {
+      "class": "CollAllReduceARSFor91093Executor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_ars_for_910_93_executor.cc",
+      "line": 86,
+      "parents": [
+        "CollAllReduceRingFor91093Executor",
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_AHC",
+        "TEMPLATE_ALL_REDUCE_AHC_BROKE",
+        "TEMPLATE_ALL_REDUCE_NB",
+        "TEMPLATE_ALL_REDUCE_NHR",
+        "TEMPLATE_ALL_REDUCE_NHR_ONESHOT",
+        "TEMPLATE_ALL_REDUCE_NHR_V1",
+        "TEMPLATE_ALL_REDUCE_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_NHR",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceAivDeterExecutor": {
+      "class": "CollAllReduceAivDeterExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_aiv_deter_executor.cc",
+      "line": 163,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceAivDeterSmallExecutor": {
+      "class": "CollAllReduceAivDeterSmallExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_aiv_deter_small_executor.cc",
+      "line": 172,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceComm": {
+      "class": "CollAllReduceCommExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_comm_executor.cc",
+      "line": 143,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_NB",
+        "TEMPLATE_ALL_REDUCE_NHR",
+        "TEMPLATE_ALL_REDUCE_NHR_ONESHOT",
+        "TEMPLATE_ALL_REDUCE_NHR_V1",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceDeterPipelineExecutor": {
+      "class": "CollAllReduceDeterPipelineExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_deter_pipeline_executor.cc",
+      "line": 184,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_MULTI_DETERMINISTIC_PIPELINE",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceMeshAivExecutor": {
+      "class": "CollAllReduceMeshAivExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_mesh_aiv_executor.cc",
+      "line": 239,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceMeshAivSmallCountExecutor": {
+      "class": "CollAllReduceMeshAivSmallCountExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_mesh_aiv_smallcount_executor.cc",
+      "line": 217,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceMeshExecutor": {
+      "class": "CollAllReduceMeshExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_mesh_executor.cc",
+      "line": 274,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_MESH",
+        "TEMPLATE_ALL_GATHER_MESH_ATOMIC",
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_AHC",
+        "TEMPLATE_ALL_REDUCE_AHC_BROKE",
+        "TEMPLATE_ALL_REDUCE_NB",
+        "TEMPLATE_ALL_REDUCE_NHR",
+        "TEMPLATE_ALL_REDUCE_NHR_ONESHOT",
+        "TEMPLATE_ALL_REDUCE_NHR_V1",
+        "TEMPLATE_ALL_REDUCE_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceMeshGraphPipelineExecutor": {
+      "class": "CollAllReduceMeshGraphPipelineExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_mesh_graph_pipeline_executor.cc",
+      "line": 100,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALLREDUCE_GRAPH_PIPELINE",
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceMeshMidCountLoopExecutor": {
+      "class": "CollAllReduceMeshMidCountExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_mesh_mid_count_executor.cc",
+      "line": 117,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_LOCAL_REDUCE",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceMeshOneshotLoopExecutor": {
+      "class": "CollAllReduceMeshOneshotExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_mesh_oneshot_executor.cc",
+      "line": 125,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_CHUNK_MESH",
+        "TEMPLATE_ALL_REDUCE_MESH_DIRECT_ONESHOT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceMeshOpbaseLoopExecutor": {
+      "class": "CollAllReduceMeshOpbaseExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_mesh_opbase_executor.cc",
+      "line": 127,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_MESH_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceMeshOpbaseMidCountDeterministicExecutor": {
+      "class": "CollAllReduceMeshOpbaseMidCountDeterministicExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_mesh_opbase_mid_count_deterministic_executor.cc",
+      "line": 287,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_MESH_ATOMIC",
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_NB",
+        "TEMPLATE_ALL_REDUCE_NHR",
+        "TEMPLATE_ALL_REDUCE_NHR_V1",
+        "TEMPLATE_ALL_REDUCE_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_PLANT_LOCAL_REDUCE",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceMeshOpbasePipelineExecutor": {
+      "class": "CollAllReduceMeshOpbasePipelineExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_mesh_opbase_pipeline_executor.cc",
+      "line": 143,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_OPBASE_PIPELINE",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceMeshOpbaseSmallCountDeterministicExecutor": {
+      "class": "CollAllReduceMeshOpbaseSmallCountDeterministicExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_mesh_opbase_small_count_deterministic_executor.cc",
+      "line": 252,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_DOUBLING_LOCAL_REDUCE",
+        "TEMPLATE_ALL_REDUCE_LOCAL_REDUCE_BCAST",
+        "TEMPLATE_ALL_REDUCE_NHR",
+        "TEMPLATE_ALL_REDUCE_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceMeshSmallCountExecutor": {
+      "class": "CollAllReduceMeshSmallCountExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_mesh_small_count_executor.cc",
+      "line": 255,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_DOUBLING",
+        "TEMPLATE_ALL_REDUCE_DOUBLING_DIRECT",
+        "TEMPLATE_ALL_REDUCE_HD_OPTIM",
+        "TEMPLATE_ALL_REDUCE_LOCAL_REDUCE_BCAST",
+        "TEMPLATE_ALL_REDUCE_REDUCE_BCAST",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceMidCountAivRdmaExecutor": {
+      "class": "CollAllReduceMidCountAivRdmaExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_mid_count_aiv_rdma_executor.cc",
+      "line": 256,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_NB",
+        "TEMPLATE_ALL_REDUCE_NHR",
+        "TEMPLATE_ALL_REDUCE_NHR_ONESHOT",
+        "TEMPLATE_ALL_REDUCE_NHR_V1",
+        "TEMPLATE_ALL_REDUCE_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceOrderPreservedExecutor": {
+      "class": "CollAllReduceOrderPreservedExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_order_preserved_executor.cc",
+      "line": 372,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_MESH_ATOMIC",
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_NHR",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_PLANT_LOCAL_REDUCE",
+        "TEMPLATE_REDUCESCATTER_PLANT_LOCAL_REDUCE_COMBINE",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceRingExecutor": {
+      "class": "CollAllReduceRingExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_ring_executor.cc",
+      "line": 279,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_AHC",
+        "TEMPLATE_ALL_REDUCE_AHC_BROKE",
+        "TEMPLATE_ALL_REDUCE_NB",
+        "TEMPLATE_ALL_REDUCE_NHR",
+        "TEMPLATE_ALL_REDUCE_NHR_ONESHOT",
+        "TEMPLATE_ALL_REDUCE_NHR_V1",
+        "TEMPLATE_ALL_REDUCE_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceSingleExecutor": {
+      "class": "CollAllReduceSingleRankExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_single_rank_executor.cc",
+      "line": 47,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AllReduceSmallCountAivRdmaExecutor": {
+      "class": "CollAllReduceSmallCountAivRdmaExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_reduce/coll_all_reduce_small_count_aiv_rdma_executor.cc",
+      "line": 282,
+      "parents": [
+        "CollAllReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "AlltoAllDirectFullmeshAIVExecutor": {
+      "class": "CollAlltoAllDirectFullmeshAIVExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_direct_fullmesh_aiv_executor.cc",
+      "line": 186,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": []
+    },
+    "AlltoAllMeshAivExecutor": {
+      "class": "CollAlltoAllMeshAivExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_mesh_aiv_executor.cc",
+      "line": 296,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": []
+    },
+    "AlltoAllMeshAivFor91093Executor": {
+      "class": "CollAlltoAllMeshAivFor91093Executor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_mesh_aiv_for_910_93_executor.cc",
+      "line": 253,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": []
+    },
+    "AlltoAllMeshAivSmallCountExecutor": {
+      "class": "CollAlltoAllMeshAivSmallCountExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_mesh_aiv_smallcount_executor.cc",
+      "line": 216,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": []
+    },
+    "AlltoAllStagedAIVRdmaExecutor": {
+      "class": "CollRunAlltoAllStagedAivRdmaExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_staged_aiv_rdma_executor.cc",
+      "line": 247,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_2_ALL_V_STAGED_PAIRWISE"
+      ]
+    },
+    "RunAlltoAllDirectFullmesh": {
+      "class": "CollRunAlltoAllDirectFullmesh",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_v_direct_fullmesh_executor.cc",
+      "line": 431,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_2_ALL_V_DIRECT_FULL_MESH"
+      ]
+    },
+    "RunAlltoAllFullMeshSymmetricMemory": {
+      "class": "CollRunAlltoAllFullMeshSymmetricMemory",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_symmetric_memory_executor.cc",
+      "line": 234,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_2_ALL_FULL_MESH_SYMMETRIC_MEMORY"
+      ]
+    },
+    "RunAlltoAllSingleExecutor": {
+      "class": "CollAlltoAllSingleRankExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_single_rank_executor.cc",
+      "line": 78,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": []
+    },
+    "RunAlltoAllVContinuousPipeline": {
+      "class": "CollAlltoAllVContinuousPipeline",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_v_continuous_pipeline_executor.cc",
+      "line": 215,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_2_ALL_V_CONTINUOUS_PIPELINE"
+      ]
+    },
+    "RunAlltoAllVFor310PExecutor": {
+      "class": "CollRunAlltoAllVFor310PExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/310P/coll_all_to_all_v_for_310p_executor.cc",
+      "line": 120,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_2_ALL_V_FOR310P"
+      ]
+    },
+    "RunAlltoAllVFullMesh": {
+      "class": "CollRunAlltoAllVFullMesh",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_v_fullmesh_executor.cc",
+      "line": 157,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_2_ALL_V_PAIRWISE"
+      ]
+    },
+    "RunAlltoAllVPipelineFor91093": {
+      "class": "CollAlltoAllVPipelineFor91093",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_v_pipeline_for_910_93_executor.cc",
+      "line": 253,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_2_ALL_V_CONTINUOUS_PIPELINE"
+      ]
+    },
+    "RunAlltoAllVStaged": {
+      "class": "CollRunAlltoAllVStaged",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_v_staged_executor.cc",
+      "line": 458,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_2_ALL_V_STAGED_MESH",
+        "TEMPLATE_ALL_2_ALL_V_STAGED_PAIRWISE"
+      ]
+    },
+    "RunAlltoAllVTwoLevelPipeline": {
+      "class": "CollRunAlltoAllVTwoLevelPipeline",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_all_to_all/coll_all_to_all_v_2level_pipeline_excecutor.cc",
+      "line": 182,
+      "parents": [
+        "CollAlltoAllExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_2_ALL_PIPELINE_MESH_PAIRWISE_CCL_ENOUGH",
+        "TEMPLATE_ALL_2_ALL_PIPELINE_MESH_PAIRWISE_PING_PONG"
+      ]
+    },
+    "BatchSendRecv": {
+      "class": "CollBatchSendRecvExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_send_receive/coll_batch_send_recv_executor.cc",
+      "line": 530,
+      "parents": [
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "BatchSendRecvGroup": {
+      "class": "CollBatchSendRecvGroupExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_send_receive/coll_batch_send_recv_group_executor.cc",
+      "line": 776,
+      "parents": [
+        "CollBatchSendRecvExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "BatchSendRecvRetry": {
+      "class": "CollBatchSendRecvRetryExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_send_receive/coll_batch_send_recv_retry_executor.cc",
+      "line": 277,
+      "parents": [
+        "CollBatchSendRecvExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "BroadCastComm": {
+      "class": "CollBroadcastCommExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_broadcast/coll_broadcast_comm_executor.cc",
+      "line": 142,
+      "parents": [
+        "CollBroadcastExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_BROADCAST_NB",
+        "TEMPLATE_BROADCAST_NB_BINARY",
+        "TEMPLATE_BROADCAST_NHR",
+        "TEMPLATE_BROADCAST_NHR_ONESHOT",
+        "TEMPLATE_BROADCAST_NHR_V1",
+        "TEMPLATE_BROADCAST_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "BroadCastMeshExecutor": {
+      "class": "CollBroadcastMeshExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_broadcast/coll_broadcast_mesh_executor.cc",
+      "line": 252,
+      "parents": [
+        "CollBroadcastExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_MESH",
+        "TEMPLATE_ALL_GATHER_MESH_ATOMIC",
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_BROADCAST_NB",
+        "TEMPLATE_BROADCAST_NB_BINARY",
+        "TEMPLATE_BROADCAST_NHR",
+        "TEMPLATE_BROADCAST_NHR_ONESHOT",
+        "TEMPLATE_BROADCAST_NHR_V1",
+        "TEMPLATE_BROADCAST_RECURSIVE_HD",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_MESH",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "BroadCastRingExecutor": {
+      "class": "CollBroadcastRingExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_broadcast/coll_broadcast_ring_executor.cc",
+      "line": 253,
+      "parents": [
+        "CollBroadcastExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_BROADCAST_NB",
+        "TEMPLATE_BROADCAST_NB_BINARY",
+        "TEMPLATE_BROADCAST_NHR",
+        "TEMPLATE_BROADCAST_NHR_ONESHOT",
+        "TEMPLATE_BROADCAST_NHR_V1",
+        "TEMPLATE_BROADCAST_RECURSIVE_HD",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "BroadcastMeshAivExecutor": {
+      "class": "CollBroadcastMeshAivExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_broadcast/coll_broadcast_mesh_aiv_executor.cc",
+      "line": 163,
+      "parents": [
+        "CollBroadcastExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReceiveExecutor": {
+      "class": "CollReceiveExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_send_receive/coll_receive_executor.cc",
+      "line": 180,
+      "parents": [
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": []
+    },
+    "ReduceComm": {
+      "class": "CollReduceCommExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce/coll_reduce_comm_executor.cc",
+      "line": 98,
+      "parents": [
+        "CollReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_REDUCE_RING",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceMeshExecutor": {
+      "class": "CollReduceMeshExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce/coll_reduce_mesh_executor.cc",
+      "line": 192,
+      "parents": [
+        "CollReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_MESH",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_REDUCE_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_REDUCE_RING",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceRingPlusHd": {
+      "class": "CollReduceRingPlusHdExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce/coll_reduce_ring_plus_hd_executor.cc",
+      "line": 171,
+      "parents": [
+        "CollReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_REDUCE_RECURSIVE_HALVING_DOUBLING",
+        "TEMPLATE_REDUCE_RING",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceSingleExecutor": {
+      "class": "CollReduceSingleRankExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce/coll_reduce_single_rank_executor.cc",
+      "line": 45,
+      "parents": [
+        "CollReduceExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterARSFor91093Executor": {
+      "class": "CollReduceScatterARSFor91093Executor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_ars_for_910_93_executor.cc",
+      "line": 81,
+      "parents": [
+        "CollReduceScatterRingFor91093Executor",
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_AHC",
+        "TEMPLATE_REDUCESCATTER_AHC_BROKE",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_NHR",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterAivDeterExecutor": {
+      "class": "CollReduceScatterAivDeterExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_aiv_deter_executor.cc",
+      "line": 206,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterAivDeterSmallExecutor": {
+      "class": "CollReduceScatterAivDeterSmallExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_aiv_deter_small_executor.cc",
+      "line": 213,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterAivRdmaExecutor": {
+      "class": "CollReduceScatterAivRdmaExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_aiv_rdma_executor.cc",
+      "line": 265,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_NHR",
+        "TEMPLATE_REDUCESCATTER_NHR_V1",
+        "TEMPLATE_REDUCESCATTER_RECURSIVE_HD",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterComm": {
+      "class": "CollReduceScatterCommExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_comm_executor.cc",
+      "line": 207,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_NHR",
+        "TEMPLATE_REDUCESCATTER_NHR_V1",
+        "TEMPLATE_REDUCESCATTER_RECURSIVE_HD",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterDeterExecutor": {
+      "class": "CollReduceScatterDeterExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_deter_executor.cc",
+      "line": 207,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_LOCAL_REDUCE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterDeterPipelineExecutor": {
+      "class": "CollReduceScatterDeterPipelineExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_deter_pipeline_executor.cc",
+      "line": 230,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_MULTI_DETERMINISTIC_PIPELINE",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterMeshAivExecutor": {
+      "class": "CollReduceScatterMeshAivExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_mesh_aiv_executor.cc",
+      "line": 237,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterMeshAivSmallCountExecutor": {
+      "class": "CollReduceScatterMeshAivSmallCountExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_mesh_aiv_smallcount_executor.cc",
+      "line": 229,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterMeshDmaEliminationExecutor": {
+      "class": "CollReduceScatterMeshDmaEliminationExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_mesh_dma_elimination.cc",
+      "line": 137,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterMeshExecutor": {
+      "class": "CollReduceScatterMeshExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_mesh_executor.cc",
+      "line": 297,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_NHR",
+        "TEMPLATE_REDUCESCATTER_NHR_V1",
+        "TEMPLATE_REDUCESCATTER_RECURSIVE_HD",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterMeshGraphExecutor": {
+      "class": "CollReduceScatterMeshGraphExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_mesh_graph_executor.cc",
+      "line": 246,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_NHR",
+        "TEMPLATE_REDUCESCATTER_NHR_V1",
+        "TEMPLATE_REDUCESCATTER_RECURSIVE_HD",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterMeshGraphPipelineExecutor": {
+      "class": "CollReduceScatterMeshGraphPipelineExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_mesh_graph_pipeline_executor.cc",
+      "line": 118,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_GRAPH_PIPELINE",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterMeshOpbasePipelineExecutor": {
+      "class": "CollReduceScatterMeshOpbasePipelineExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_mesh_opbase_pipeline_executor.cc",
+      "line": 196,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_PIPELINE",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterMeshOpbaseSmallCountDeterministicExecutor": {
+      "class": "CollReduceScatterMeshOpbaseSmallCountDeterministicExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_mesh_opbase_small_count_deterministic_executor.cc",
+      "line": 300,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_NHR",
+        "TEMPLATE_REDUCESCATTER_RECURSIVE_HD",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterOrderPreservedExecutor": {
+      "class": "CollReduceScatterOrderPreservedExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_order_preserved_executor.cc",
+      "line": 275,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_PLANT_LOCAL_REDUCE",
+        "TEMPLATE_REDUCESCATTER_PLANT_LOCAL_REDUCE_COMBINE",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterRingExecutor": {
+      "class": "CollReduceScatterRingExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_ring_executor.cc",
+      "line": 390,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_NHR",
+        "TEMPLATE_REDUCESCATTER_NHR_V1",
+        "TEMPLATE_REDUCESCATTER_RECURSIVE_HD",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterSingleExecutor": {
+      "class": "CollReduceScatterSingleRankExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter/coll_reduce_scatter_single_rank_executor.cc",
+      "line": 50,
+      "parents": [
+        "CollReduceScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterVAIVBigCountExecutor": {
+      "class": "CollReduceScatterVAIVBigCountExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter_v/coll_reduce_scatter_v_aiv_big_count_executor.cc",
+      "line": 166,
+      "parents": [
+        "CollReduceScatterVExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterVDeterExecutor": {
+      "class": "CollReduceScatterVDeterExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter_v/coll_reduce_scatter_v_deter_executor.cc",
+      "line": 359,
+      "parents": [
+        "CollReduceScatterVExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_NHR",
+        "TEMPLATE_REDUCESCATTER_PLANT_LOCAL_REDUCE",
+        "TEMPLATE_REDUCESCATTER_PLANT_LOCAL_REDUCE_COMBINE",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterVMeshAivSmallCountExecutor": {
+      "class": "CollReduceScatterVMeshAivSmallCountExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter_v/coll_reduce_scatter_v_mesh_aiv_smallcount_executor.cc",
+      "line": 150,
+      "parents": [
+        "CollReduceScatterVExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterVMeshExecutor": {
+      "class": "CollReduceScatterVMeshExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter_v/coll_reduce_scatter_v_mesh_executor.cc",
+      "line": 127,
+      "parents": [
+        "CollReduceScatterVExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterVMeshOpbaseExecutor": {
+      "class": "CollReduceScatterVMeshOpbaseExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter_v/coll_reduce_scatter_v_mesh_opbase_executor.cc",
+      "line": 353,
+      "parents": [
+        "CollReduceScatterVExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_NHR",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ReduceScatterVMeshOpbasePipelineExecutor": {
+      "class": "CollReduceScatterVMeshOpbasePipelineExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_reduce_scatter_v/Coll_reduce_scatter_v_mesh_opbase_pipeline_executor.cc",
+      "line": 183,
+      "parents": [
+        "CollReduceScatterVExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_PIPELINE",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_REDUCESCATTER_V_PIPELINE",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ScatterCommExecutor": {
+      "class": "CollScatterCommExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_scatter/coll_scatter_comm_executor.cc",
+      "line": 81,
+      "parents": [
+        "CollScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_NB",
+        "TEMPLATE_SCATTER_NHR",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ScatterMeshExecutor": {
+      "class": "CollScatterMeshExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_scatter/coll_scatter_mesh_executor.cc",
+      "line": 112,
+      "parents": [
+        "CollScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_MESH",
+        "TEMPLATE_SCATTER_NB",
+        "TEMPLATE_SCATTER_NHR",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ScatterRingExecutor": {
+      "class": "CollScatterRingExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_scatter/coll_scatter_ring_executor.cc",
+      "line": 136,
+      "parents": [
+        "CollScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_NB",
+        "TEMPLATE_SCATTER_NHR",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ScatterRingFor91093Executor": {
+      "class": "CollScatterRingFor91093Executor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_scatter/coll_scatter_ring_for_910_93_executor.cc",
+      "line": 294,
+      "parents": [
+        "CollScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_NB",
+        "TEMPLATE_SCATTER_NHR",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "ScatterSingleExecutor": {
+      "class": "CollScatterSingleRankExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_scatter/coll_scatter_single_rank_executor.cc",
+      "line": 34,
+      "parents": [
+        "CollScatterExecutor",
+        "CollCommExecutor",
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": [
+        "TEMPLATE_ALL_GATHER_NB",
+        "TEMPLATE_ALL_GATHER_RING",
+        "TEMPLATE_ALL_GATHER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_ALL_REDUCE_RING",
+        "TEMPLATE_GATHER_RING",
+        "TEMPLATE_MULTI_ROOT_SCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_HDSTAGE",
+        "TEMPLATE_REDUCESCATTER_MESH",
+        "TEMPLATE_REDUCESCATTER_MESH_ATOMIC",
+        "TEMPLATE_REDUCESCATTER_MESH_DIRECT",
+        "TEMPLATE_REDUCESCATTER_MESH_MIX_SS",
+        "TEMPLATE_REDUCESCATTER_NB",
+        "TEMPLATE_REDUCESCATTER_RING",
+        "TEMPLATE_REDUCESCATTER_RING_DIRECT",
+        "TEMPLATE_SCATTER_NB",
+        "TEMPLATE_SCATTER_NHR",
+        "TEMPLATE_SCATTER_RING",
+        "TEMPLATE_SCATTER_RING_CONCURRENT_DIRECT",
+        "TEMPLATE_SCATTER_RING_DIRECT"
+      ]
+    },
+    "SendExecutor": {
+      "class": "CollSendExecutor",
+      "registry": "src/legacy/ascend910/algorithm/impl/coll_executor/coll_send_receive/coll_send_executor.cc",
+      "line": 191,
+      "parents": [
+        "CollNativeExecutorBase",
+        "CollExecutorBase"
+      ],
+      "templates": []
+    }
+  }
+}

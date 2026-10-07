@@ -1,0 +1,11 @@
+{
+  "registered_commands": 15,
+  "candidate_executors": 95,
+  "markdown_links_checked": 4547,
+  "source_files_hashed": 916,
+  "issues": [],
+  "unresolved_registry_findings": [
+    "broadcast: BroadCast4pRingExecutor"
+  ],
+  "validation": "Static indexing and traceability only; HCCL not executed"
+}

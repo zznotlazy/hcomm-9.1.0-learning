@@ -1,0 +1,14 @@
+{
+  "upstream_url": "https://gitcode.com/cann/hcomm.git",
+  "upstream_branch": "9.1.0",
+  "upstream_commit": "9aa5deb8a2a14de0c4cd6b077ed9af1555c1402f",
+  "snapshot": "All tracked files at the upstream commit; no upstream history",
+  "tracked_files": 7034,
+  "materialized_png_assets": 92,
+  "allowed_upstream_changes": [
+    ".gitattributes",
+    "README.md"
+  ],
+  "added_material": "Learning documents, teaching instructions, validation tools and CI",
+  "license": "CANN Open Software License Agreement Version 2.0"
+}
