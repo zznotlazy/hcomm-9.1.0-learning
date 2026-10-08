@@ -1,8 +1,8 @@
 {
   "registered_commands": 15,
   "candidate_executors": 95,
-  "markdown_links_checked": 4547,
-  "source_files_hashed": 916,
+  "markdown_links_checked": 4578,
+  "source_files_hashed": 917,
   "issues": [],
   "unresolved_registry_findings": [
     "broadcast: BroadCast4pRingExecutor"

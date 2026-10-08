@@ -921,6 +921,7 @@
     "src/legacy/ascend910/framework/op_base/src/op_base_host.cc": "89f59a81647f52a9b3552f439d4a67f67cfdb876c19b03c085ee6e535166ce27",
     "src/legacy/ascend910/platform/common/device_capacity.cc": "23b2babbda0ebc936131a6a9140093d16e94f10d60001bfcd2883fe02460d2a7",
     "src/legacy/ascend910/pub_inc/hccl_common.h": "1907327caa6eee8f00c07619bcbb74ff02c110431b7718f667ae194de2512b95",
+    "src/legacy/ascend910/pub_inc/log.h": "d25c9c5dce68e7c54cd6e28ff5a268daf482e3119babd9a8829386745caf1b69",
     "test/ut/impl/ut_hccl_impl_new.cc": "43ec26aaf7f45e2b7e07d4b65330950ac01915496218544d63109299e9edfa6a",
     "test/ut/inter/comm/ut_allgather_common.cc": "087b5e04809a76d857c42be9466b539f678d8eab5b88060ff97f81b2e68af529",
     "test/ut/inter/comm/ut_coll_alg_operator.cc": "00c4e86ce50d2535ad8fc03aabbf3437d5ad3f28e86e5fa91623f1461b4e9faa"

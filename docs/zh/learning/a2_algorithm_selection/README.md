@@ -4,6 +4,8 @@
 
 ## 阅读路线
 
+只会基础 Python、尚未学习 C++ 时，先读 [C++ 源码阅读讲义](00_cpp_for_python_readers.md)。它用 Python 对照解释必要语法，包含真实 AllGather 片段、10 道练习与答案。
+
 1. [公共选择机制](01_common.md)：先弄清拓扑、配置、分层算法与执行器的关系。
 2. [AllGather 完整示范](02_allgather.md)：按条件推导一次完整选择。
 3. [AllReduce 与 ReduceScatter](03_reductions.md)：理解确定性、归约能力和小数据优化。

@@ -5,6 +5,7 @@
 这是个人学习快照，源码固定为上游 `9.1.0` 提交 `9aa5deb8a2a14de0c4cd6b077ed9af1555c1402f`，不是官方发行仓库。保留完整源码，学习分析目前聚焦 Ascend A2/910B 的传统集合通信算法选择与切换。
 
 - [算法选择学习手册](docs/zh/learning/a2_algorithm_selection/README.md)：各算子有序决策表、配置覆盖、模板切换和源码证据。
+- [从基础 Python 到 C++ 源码阅读](docs/zh/learning/a2_algorithm_selection/00_cpp_for_python_readers.md)：零 C++ 基础的前置讲义，结合 AllGather 源码与练习。
 - [云端教学与学习交接](docs/zh/learning/a2_algorithm_selection/CLOUD_LEARNING.md)：开场提示词、阅读顺序、已知限制与进度模板。
 - [助手教学约定](AGENTS.md)：中文讲解，以源码为准，默认只读。
 - [源码来源与打包差异](docs/zh/learning/a2_algorithm_selection/source_provenance.json)：全部受版本控制文件的快照，保留许可证；PNG 图片直接存入 Git，不依赖 LFS。
